@@ -1,0 +1,6 @@
+{
+  "name": "Megapack Excel 10 en 1",
+  "description": "10 cursos completos para dominar Excel, Power BI y SQL desde cero hasta nivel profesional. Acceso inmediato, plantillas y soporte por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Megapack Excel 10 en 1 · Excel, Power BI, SQL y más</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6faf7;--sf:#fff;--ink:#12241a;--mut:#4d6357;--g:#1d6f42;--gd:#0e4a2b;--y:#ffd84d;--ln:#cfe0d5;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a13;--sf:#14271c;--ink:#eaf4ee;--mut:#9db5a7;--g:#3fb877;--gd:#2a8f58;--ln:#264434;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1a13;--sf:#14271c;--ink:#eaf4ee;--mut:#9db5a7;--g:#3fb877;--gd:#2a8f58;--ln:#264434;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "IBM Plex Sans",system-ui,sans-serif;padding-bottom:84px;
+background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:44px 44px;background-attachment:fixed}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.1rem,9.5vw,3.2rem);font-weight:800}
+h2{font-size:1.75rem;font-weight:800;margin-bottom:.6rem}
+p{margin:.5rem 0}
+.w{max-width:560px;margin:0 auto;padding:0 18px}
+section{padding:34px 0}
+.bar{background:var(--gd);color:#fff;text-align:center;font-size:.86rem;padding:9px 14px;font-weight:500}
+.sheet{background:var(--sf);border:1px solid var(--ln);border-radius:10px;overflow:hidden;margin:22px 0 16px}
+.fx{display:flex;gap:10px;align-items:center;border-bottom:1px solid var(--ln);padding:8px 12px;font:500 .9rem/1.2 "IBM Plex Sans",sans-serif;color:var(--mut)}
+.fx b{color:var(--g);font-style:italic}
+.cells{display:grid;grid-template-columns:34px 1fr 1fr}
+.cells>div{padding:10px 12px;border-right:1px solid var(--ln);border-bottom:1px solid var(--ln);font-size:.9rem;color:var(--mut)}
+.cells .h{background:var(--bg);text-align:center;font-weight:600;padding:6px}
+.res{grid-column:3;border:2.5px solid var(--g)!important;background:var(--y);color:#12241a!important;font:800 1.7rem/1 "Bricolage Grotesque",sans-serif;display:flex;align-items:center;justify-content:center;animation:pulse 1.4s ease-out 1}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(29,111,66,.55)}100%{box-shadow:0 0 0 18px rgba(29,111,66,0)}}
+.old{text-decoration:line-through;color:var(--mut)}
+.off{display:inline-block;background:var(--y);color:#12241a;font-weight:800;border-radius:6px;padding:2px 9px}
+.btn{display:block;width:100%;text-align:center;border:0;border-radius:12px;padding:16px 18px;font:600 1.05rem/1.2 "IBM Plex Sans",sans-serif;text-decoration:none;cursor:pointer;margin-top:12px}
+.p{background:var(--g);color:#fff;box-shadow:0 5px 0 var(--gd)}
+.p:active{transform:translateY(3px);box-shadow:0 2px 0 var(--gd)}
+.s{background:var(--sf);color:var(--ink);border:2px solid var(--g)}
+.btn:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+.sub{font-size:.88rem;color:var(--mut);text-align:center;margin-top:8px}
+.steps{display:grid;gap:12px;margin-top:14px}
+.st{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.st i{font:800 1.1rem/36px "Bricolage Grotesque",sans-serif;background:var(--g);color:#fff;border-radius:50%;width:36px;height:36px;text-align:center;font-style:normal}
+.st b{display:block}
+.rows{background:var(--sf);border:1px solid var(--ln);border-radius:10px;overflow:hidden;margin-top:12px}
+.r{display:grid;grid-template-columns:34px 1fr;border-bottom:1px solid var(--ln)}
+.r:last-child{border:0}
+.r span{background:var(--bg);color:var(--mut);text-align:center;font-size:.8rem;padding:12px 0;border-right:1px solid var(--ln)}
+.r div{padding:10px 12px}
+.r b{display:block;font-weight:600}
+.r small{color:var(--mut)}
+.bonus{background:var(--y);color:#12241a;font-size:.72rem;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.tot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-weight:600}
+details{background:var(--sf);border:1px solid var(--ln);border-radius:10px;margin-top:10px;padding:0 14px}
+summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none}
+summary::after{content:"+";float:right;color:var(--g);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--mut);padding-bottom:12px}
+.fin{background:var(--gd);color:#fff;border-radius:16px;padding:26px 20px;text-align:center}
+.fin h2{color:#fff}
+.fin p{color:#d7eadf}
+.dock{position:fixed;left:0;right:0;bottom:0;background:var(--sf);border-top:1px solid var(--ln);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;z-index:5}
+.dock .btn{margin:0;padding:13px 10px;font-size:.98rem}
+.dock .p{flex:1.4}.dock .s{flex:1}
+dialog{border:0;border-radius:16px;padding:22px 18px;width:min(92vw,420px);background:var(--sf);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+input{width:100%;padding:14px;border-radius:10px;border:2px solid var(--ln);background:var(--bg);color:var(--ink);font:500 1.05rem "IBM Plex Sans",sans-serif;margin-top:12px}
+.err{color:#c0392b;font-size:.9rem;margin-top:8px;min-height:1.2em}
+.x{float:right;background:none;border:0;color:var(--mut);font-size:1.6rem;cursor:pointer;line-height:1}
+.ok{text-align:center}
+.ok .tick{width:64px;height:64px;border-radius:50%;background:var(--g);color:#fff;font-size:2rem;line-height:64px;margin:0 auto 10px;animation:pop .4s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+.pay{display:grid;gap:10px;margin:14px 0}.pc{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:12px 14px}.pc small{display:block;color:var(--mut)}.pc b{font:800 1.25rem/1.2 "Bricolage Grotesque",sans-serif;letter-spacing:.02em}.cp{background:var(--g);color:#fff;border:0;border-radius:8px;padding:9px 14px;font:600 .9rem "IBM Plex Sans",sans-serif;cursor:pointer}.cp:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bar">Tu acceso se activa apenas confirmamos tu pago y recibes tu contraseña por WhatsApp</div>
+
+<main class="w">
+<section style="padding-top:26px">
+  <h1>10 cursos para dominar Excel, Power BI y SQL en un solo programa</h1>
+  <p style="font-size:1.08rem">Desde cero hasta experto, con macros, finanzas, análisis de datos y diseño. Aprendes a tu ritmo y lo usas en tu trabajo o tu negocio.</p>
+
+  <div class="sheet" aria-label="Precio del Megapack">
+    <div class="fx"><b>fx</b><span>=89.900 × (1 − 89 %)</span></div>
+    <div class="cells">
+      <div class="h"></div><div class="h">Precio normal</div><div class="h">Tu precio hoy</div>
+      <div class="h">1</div><div class="old" style="display:flex;align-items:center">$89.900</div><div class="res" id="px">$10.000</div>
+    </div>
+  </div>
+  <p style="text-align:center"><span class="off">89 % DE DESCUENTO</span> &nbsp;Pago único, sin mensualidades</p>
+
+  <button class="btn p" data-open>Acceder al contenido ahora</button>
+  <a class="btn s" href="#pagar">Ver cómo pagar</a>
+  <p class="sub">Pago único de $10.000 · Te atiende Miguel Aguirre por WhatsApp</p>
+</section>
+
+<section>
+  <h2>Así recibes tu acceso</h2>
+  <p>Es un proceso corto y se hace todo desde tu celular.</p>
+  <div class="steps">
+    <div class="st"><i>1</i><div><b>Haz tu pago de $10.000</b>Por Nequi, Bre-B o Bancolombia. Los datos están más abajo en esta página.</div></div>
+    <div class="st"><i>2</i><div><b>Envía el comprobante</b>Mándalo por WhatsApp al 314 824 6523. Verificamos tu pago y te respondemos con tu contraseña.</div></div>
+    <div class="st"><i>3</i><div><b>Recibe tu contraseña y entra</b>La pones en el botón “Acceder” de esta página y se abre tu carpeta con los 10 cursos.</div></div>
+  </div>
+</section>
+
+<section id="pagar">
+  <h2>Datos para tu pago</h2>
+  <p>Elige el medio que prefieras. Todas las cuentas están a nombre de <b>Miguel Aguirre</b>: antes de confirmar la transferencia, revisa que ese nombre aparezca en tu app.</p>
+  <div class="pay">
+    <div class="pc"><div><small>Nequi</small><b>3019390843</b></div><button class="cp" data-c="3019390843">Copiar</button></div>
+    <div class="pc"><div><small>Llave Bre-B</small><b>1000636440</b></div><button class="cp" data-c="1000636440">Copiar</button></div>
+    <div class="pc"><div><small>Bancolombia · Cuenta de ahorros</small><b>31100138240</b></div><button class="cp" data-c="31100138240">Copiar</button></div>
+  </div>
+  <p>Valor a pagar: <b>$10.000 COP</b>. No te pedimos claves, tarjetas ni datos bancarios: solo el comprobante.</p>
+  <a class="btn p" data-wa="Hola, ya realicé el pago del Megapack de Excel. Adjunto mi comprobante para recibir la contraseña.">Ya pagué: enviar comprobante</a>
+  <p class="sub">Si algo no te funciona, te ayudo por WhatsApp hasta que logres entrar.</p>
+</section>
+
+<section>
+  <h2>Todo lo que incluye</h2>
+  <p>Excel, Power BI, SQL, negocios, análisis de datos y diseño.</p>
+  <div class="rows">
+    <div class="r"><span>1</span><div><b>Excel básico desde cero</b><small>Para empezar sin saber nada</small></div></div>
+    <div class="r"><span>2</span><div><b>Excel intermedio</b><small>Fórmulas, tablas y ordenar datos</small></div></div>
+    <div class="r"><span>3</span><div><b>Excel avanzado</b><small>Funciones y herramientas de análisis</small></div></div>
+    <div class="r"><span>4</span><div><b>Excel experto</b><small>Nivel profesional</small></div></div>
+    <div class="r"><span>5</span><div><b>Macros y VBA</b><small>Automatiza tareas repetitivas</small></div></div>
+    <div class="r"><span>6</span><div><b>Excel financiero y para profesionales</b><small>Modelos y reportes para el trabajo</small></div></div>
+    <div class="r"><span>7</span><div><b>Inteligencia empresarial y análisis de datos con Power BI</b><small>Dashboards e informes</small></div></div>
+    <div class="r"><span>8</span><div><b>Análisis de datos y SQL<em class="bonus">BONUS</em></b><small>Consulta y analiza bases de datos</small></div></div>
+    <div class="r"><span>9</span><div><b>Curso de Canva y plantillas<em class="bonus">BONUS</em></b><small>Diseño para tus presentaciones y redes</small></div></div>
+    <div class="r"><span>10</span><div><b>Curso de PowerPoint<em class="bonus">BONUS</em></b><small>Presentaciones que se entienden</small></div></div>
+  </div>
+  <div class="tot"><span>Precio normal <span class="old">$89.900</span></span><span class="off">Hoy $10.000</span></div>
+  <button class="btn p" data-open>Quiero mi acceso</button>
+</section>
+
+<section>
+  <h2>Pensado para ti si…</h2>
+  <p>Quieres subir de nivel en tu trabajo, conseguir empleo con mejores herramientas, ordenar las cuentas de tu negocio o aprender análisis de datos sin pagar cursos sueltos.</p>
+</section>
+
+<section>
+  <h2>Resuelve tus dudas</h2>
+  <details><summary>¿Cómo recibo el contenido?</summary><p>Cuando envías el comprobante de pago por WhatsApp, te entrego la contraseña. La escribes en el botón “Acceder al contenido” y se abre el enlace con todos los cursos.</p></details>
+  <details><summary>¿Cuánto cuesta y hay cobros extra?</summary><p>El precio es $10.000 COP, pago único. No hay mensualidades ni suscripciones.</p></details>
+  <details><summary>¿Cómo pago?</summary><p>Transfieres $10.000 a Nequi, Bre-B o Bancolombia. Los datos están en la sección “Datos para tu pago”, a nombre de Miguel Aguirre.</p></details>
+  <details><summary>¿Es seguro pagar?</summary><p>Pagas por transferencia directa a cuentas a nombre de Miguel Aguirre y puedes comprobar el nombre en tu app antes de confirmar. Nunca te pedimos claves ni datos de tu tarjeta, solo el comprobante.</p></details>
+  <details><summary>¿Necesito saber Excel para empezar?</summary><p>No. El programa arranca con un curso de Excel básico desde cero y avanza por niveles.</p></details>
+  <details><summary>¿En qué dispositivo lo veo?</summary><p>Los cursos están en una carpeta de Drive, a la que entras desde tu celular o tu computador. Para practicar Excel conviene un computador.</p></details>
+  <details><summary>Ya pagué y no me llega la contraseña</summary><p>Escríbeme por WhatsApp con tu comprobante y lo revisamos hasta resolverlo.</p></details>
+</section>
+
+<section>
+  <div class="fin">
+    <h2>Tu acceso está a un comprobante de distancia</h2>
+    <p>10 cursos por $10.000 en vez de $89.900.</p>
+    <button class="btn p" style="background:var(--y);color:#12241a;box-shadow:0 5px 0 #b89a1c" data-open>Acceder al contenido</button>
+    <a class="btn s" style="background:transparent;color:#fff;border-color:#fff" data-wa="Hola, ya realicé el pago del Megapack de Excel. Adjunto mi comprobante para recibir la contraseña.">Ya pagué: enviar comprobante</a>
+  </div>
+</section>
+</main>
+
+<div class="dock">
+  <button class="btn p" data-open>Acceder ahora</button>
+  <a class="btn s" href="#pagar">Cómo pagar</a>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <button class="x" id="cl" aria-label="Cerrar">×</button>
+  <div id="gate">
+    <h2 id="dt" style="font-size:1.45rem">Acceso al contenido</h2>
+    <p>Escribe la contraseña que recibes por WhatsApp cuando envías tu comprobante de pago.</p>
+    <input id="pw" type="password" placeholder="Contraseña" autocomplete="off" autocapitalize="off" aria-label="Contraseña">
+    <div class="err" id="er" role="alert"></div>
+    <button class="btn p" id="go">Desbloquear</button>
+    <p class="sub" style="margin-top:14px">¿Aún no tienes la contraseña?</p>
+    <a class="btn s" style="margin-top:6px" data-wa="Hola, ya realicé el pago del Megapack de Excel. Adjunto mi comprobante para recibir la contraseña.">Enviar comprobante por WhatsApp</a>
+  </div>
+  <div id="done" class="ok" hidden>
+    <div class="tick">✓</div>
+    <h2 style="font-size:1.45rem">¡Acceso desbloqueado!</h2>
+    <p>Tus 10 cursos te esperan en Drive.</p>
+    <a class="btn p" id="dl" target="_blank" rel="noopener">Abrir mis cursos</a>
+  </div>
+</dialog>
+
+<script>
+(function(){
+var WA="573148246523",BLOB="cqLZJ71RcnfPDRTeFDnDvuRmir1RzYTqqlOABBHljL/+goPK7eBp3vPHuZBSGedweAnUj5TyknbCOk+9vNChyFEtCXFW1CUStF0M75ClqHcQf+OtjSVo57nSrXxaNXM7tk6nHNdjif0B/5MI5eBwb3uoFtrvELQEAOMgazCBdx0AqNo=";
+document.querySelectorAll("[data-wa]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent(a.getAttribute("data-wa"));a.target="_blank";a.rel="noopener"});
+var d=document.getElementById("dlg"),pw=document.getElementById("pw"),er=document.getElementById("er");
+document.querySelectorAll("[data-open]").forEach(function(b){b.onclick=function(){d.showModal();setTimeout(function(){pw.focus()},50)}});
+document.getElementById("cl").onclick=function(){d.close()};
+function b64(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0)})}
+async function dec(p){
+  var r=b64(BLOB),enc=new TextEncoder();
+  var km=await crypto.subtle.importKey("raw",enc.encode(p),"PBKDF2",false,["deriveKey"]);
+  var k=await crypto.subtle.deriveKey({name:"PBKDF2",salt:r.slice(0,16),iterations:100000,hash:"SHA-256"},km,{name:"AES-GCM",length:256},false,["decrypt"]);
+  var o=await crypto.subtle.decrypt({name:"AES-GCM",iv:r.slice(16,28)},k,r.slice(28));
+  return new TextDecoder().decode(o);
+}
+async function go(){
+  var v=pw.value.trim();er.textContent="";
+  if(!v){er.textContent="Escribe la contraseña para continuar.";return}
+  if(!window.crypto||!crypto.subtle){er.textContent="Abre esta página con Chrome o Safari actualizado para continuar.";return}
+  try{
+    var u=await dec(v);
+    document.getElementById("dl").href=u;
+    document.getElementById("gate").hidden=true;
+    document.getElementById("done").hidden=false;
+  }catch(e){er.textContent="Contraseña incorrecta. Revisa mayúsculas y números, o pídela enviando tu comprobante por WhatsApp."}
+}
+document.getElementById("go").onclick=go;
+pw.addEventListener("keydown",function(e){if(e.key==="Enter")go()});
+function fb(v){var t=document.createElement("textarea");t.value=v;document.body.appendChild(t);t.select();try{document.execCommand("copy")}catch(e){}t.remove()}
+document.querySelectorAll(".cp").forEach(function(b){b.onclick=function(){var v=b.getAttribute("data-c");function ok(){b.textContent="¡Copiado!";setTimeout(function(){b.textContent="Copiar"},1800)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok,function(){fb(v);ok()})}else{fb(v);ok()}}});
+var px=document.getElementById("px");
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  var t0=performance.now();
+  (function tick(t){var p=Math.min((t-t0)/1300,1),e=1-Math.pow(1-p,3),n=Math.round(89900-(89900-10000)*e);
+    px.textContent="$"+n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
+    if(p<1)requestAnimationFrame(tick)})(t0);
+}
+})();
+</script>
+</body>
+</html>
